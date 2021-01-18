@@ -13,6 +13,6 @@ with open ('multi_array.npz','wb') as f:
     np.savez(f,array1=array1,array2=array2)
 npz=np.load('multi_array.npz')
 
-
+array3=np.array([[4,5,6],[1,2,3]])
 with open('multi_array_2.npz','wb') as f:
-    np.savez(f,array1=npz[npz.files[0]],array2=npz[npz.files[1]])
+    np.savez(f,array1=npz[npz.files[0]],array2=npz[npz.files[1]],array3=array3)

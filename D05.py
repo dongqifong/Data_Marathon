@@ -55,7 +55,8 @@ print('Std of Math:',std_math)
 print()
 
 #3. 用補考後資料找出與國文成績相關係數最高的學科?
-matrix=np.array([english_score.T,math_score.T,chinese_score.T])
+matrix=np.corrcoef(np.array([english_score.T,math_score.T,chinese_score.T]))
+
 if matrix[0][2]>matrix[1][2]:
     print('The subject that has maximum correlation coefficient with Chinese: English')
 else:
